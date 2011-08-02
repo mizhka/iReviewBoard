@@ -48,6 +48,6 @@ function RBAPI() {
 	this.fetchFileDiffJSON = function(requestID, diffID, fileID, callback) {
 		this.advancedJSONCall( function(json) {
 			Ti.API.debug(json);
-		},'/api/review-requests/'+ requestID + '/diffs/' + diffID,'FileDiff',"text/x-patch","GET",0);
+		},'/api/review-requests/'+ requestID + '/diffs/' + diffID + '/files/' + fileID + '/','FileDiff',"text/x-patch","GET",0);
 	};
 }
